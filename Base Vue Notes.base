@@ -1,0 +1,30 @@
+views:
+  - type: table
+    name: Tableau
+    filters:
+      and:
+        - file.folder.startsWith("Notes")
+    order:
+      - file.name
+      - tags
+      - file.size
+      - Partie
+      - Ordre
+    sort:
+      - property: file.size
+        direction: DESC
+      - property: file.name
+        direction: DESC
+      - property: tags
+        direction: ASC
+  - type: table
+    name: Vue
+    order:
+      - file.name
+      - tags
+      - file.folder
+    sort:
+      - property: file.folder
+        direction: ASC
+      - property: tags
+        direction: ASC
